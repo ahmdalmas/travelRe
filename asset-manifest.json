@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/travelRe/static/css/main.860b391e.css",
-    "main.js": "/travelRe/static/js/main.4ba66289.js",
+    "main.js": "/travelRe/static/js/main.0856769e.js",
     "static/media/img-2.jpg": "/travelRe/static/media/img-2.bb238fc1bea8ae2474d2.jpg",
     "static/media/img-9.jpg": "/travelRe/static/media/img-9.f97f588f3670715d01b2.jpg",
     "index.html": "/travelRe/index.html",
     "main.860b391e.css.map": "/travelRe/static/css/main.860b391e.css.map",
-    "main.4ba66289.js.map": "/travelRe/static/js/main.4ba66289.js.map"
+    "main.0856769e.js.map": "/travelRe/static/js/main.0856769e.js.map"
   },
   "entrypoints": [
     "static/css/main.860b391e.css",
-    "static/js/main.4ba66289.js"
+    "static/js/main.0856769e.js"
   ]
 }
