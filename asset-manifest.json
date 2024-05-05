@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ahmdalmas/travelRe/static/css/main.c1c43dc7.css",
+    "main.js": "/ahmdalmas/travelRe/static/js/main.8fa36a06.js",
+    "static/media/img-2.jpg": "/ahmdalmas/travelRe/static/media/img-2.bb238fc1bea8ae2474d2.jpg",
+    "static/media/img-9.jpg": "/ahmdalmas/travelRe/static/media/img-9.f97f588f3670715d01b2.jpg",
+    "index.html": "/ahmdalmas/travelRe/index.html",
+    "main.c1c43dc7.css.map": "/ahmdalmas/travelRe/static/css/main.c1c43dc7.css.map",
+    "main.8fa36a06.js.map": "/ahmdalmas/travelRe/static/js/main.8fa36a06.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c1c43dc7.css",
+    "static/js/main.8fa36a06.js"
+  ]
+}
