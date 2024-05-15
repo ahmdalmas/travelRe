@@ -10,7 +10,7 @@ import './Navbar.css'
 function NavScrollExample() {
   return (
     <Navbar expand="lg" sticky="top" bg="dark" data-bs-theme="dark" className="bg-body-tertiary navibar">
-      <Container fluid className='lg:mx-5 md:mx-2'>
+      <Container fluid className='xl:mx-8 lg:mx-5 md:mx-2'>
       <Navbar.Brand href="/" className='fs-2 fw-bold'>
             TRAVL<i className="fab fa-gripfire fs-1"></i>
           </Navbar.Brand>
@@ -41,7 +41,7 @@ function NavScrollExample() {
           <span class="fs-6">AE</span>
               </div>
               <div className='icon-btn'>
-          <i class="material-symbols-outlined fs-3">person</i>
+              <i class="material-symbols-outlined fs-3">person</i>
               </div>
         </div>
       </Container>

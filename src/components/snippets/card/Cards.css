@@ -53,6 +53,8 @@ h1 {
   height: 280px;
   padding-top: 67%;
   overflow: hidden;
+  border-top-left-radius: 1.25rem;
+  border-top-right-radius: 1.25rem;
 }
 
 .fade-img {
@@ -63,10 +65,8 @@ h1 {
 .cards__item__pic-wrap::after {
   content: attr(data-category);
   position: absolute;
-  top: 15px;
+  top: 20px;
   right: 0px;
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
   padding: 6px 8px;
   max-width: calc((100%) - 60px);
   font-size: 12px;
@@ -133,30 +133,30 @@ h1 {
 
 
 @media only screen and (max-width: 1536px) {
-  .grid-cols-4 {
+  .grid-columns {
     grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
 }
 }
 
 @media only screen and (max-width: 1280px) {
-  .grid-cols-4 {
+  .grid-columns {
     grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
 }
 }
 
 @media only screen and (max-width: 992px) {
-  .grid-cols-3 {
+  .grid-columns {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
 
 }@media only screen and (max-width: 768px) {
-  .grid-cols-2 {
+  .grid-columns {
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 }
 }
 
 @media only screen and (max-width: 576px) {
-  .grid-cols-1 {
+  .grid-columns {
     grid-template-columns: repeat(1, minmax(0, 1fr))!important;
 }
 }

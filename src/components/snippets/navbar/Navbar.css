@@ -145,11 +145,10 @@ background-color: #031244;
   justify-content: center;
   align-items: center;
   font-size: 1.2rem;
-  position: fixed;
   width: 100%;
-  top: 0;
+  top: -1px;
   z-index: 999;
-  box-shadow: 0px 20px 20px 20px rgb(0 0 0 / 10%);
+
 }
 
 .navbar-container {
@@ -221,6 +220,14 @@ background-color: #031244;
   .lg\:mx-5{
     margin-right: 3rem;
     margin-left: 3rem;
+  }
+
+}
+
+@media only screen and (min-width: 1560px){
+  .xl\:mx-8{
+    margin-right: 8rem;
+    margin-left: 8rem;
   }
 
 }

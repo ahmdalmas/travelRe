@@ -15,17 +15,21 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      
+
       <Router>
-          <Navbar />
-          <ScrollToTop>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/services' element={<Services />} />
-            <Route path='/sign-up' element={<SignUp />} />
-            <Route path='/services/activity' element={<Destination />} />
-          </Routes>
-          </ScrollToTop>
+        <Navbar />
+        <ScrollToTop>
+          <main>
+            <div>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/services' element={<Services />} />
+                <Route path='/sign-up' element={<SignUp />} />
+                <Route path='/services/activity' element={<Destination />} />
+              </Routes>
+            </div>
+          </main>
+        </ScrollToTop>
       </Router>
     </div>
   );
