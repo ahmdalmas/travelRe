@@ -1,0 +1,96 @@
+.banner-section {
+    background-image: url(/public/images/newsletter-banner.png), linear-gradient(180deg, #202f59, #202f59);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 0 8.5%;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .banner-section {
+        padding: 0 2%;
+    }
+}
+
+.banner-section .single-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.banner-section .single-contact .content {
+    text-align: center;
+}
+
+.banner-section .single-contact .icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #fbb03b;
+    box-shadow: 0 0 20px #fbb03b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+
+.banner-section .banner-content {
+    padding: 75px 70px;
+    text-align: center;
+    border-left: 1px solid hsla(0, 0%, 100%, .2);
+    border-right: 1px solid hsla(0, 0%, 100%, .2);
+}
+
+.banner-section .single-contact.green .icon {
+    background-color:#63ab45;
+    box-shadow: 0 0 20px #63ab45;
+}
+
+
+.banner-section .single-contact .content span {
+    color: #fbb03b;
+    font-family: var(--font-rubik);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1;
+    display: block;
+    margin-bottom: 15px;
+}
+
+
+.banner-section .single-contact .content a {
+    color: #fff;
+    font-family: var(--font-rubik);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: .75px;
+    transition: .5s;
+}
+
+.banner-section .banner-content h2 {
+    color: #fff;
+    font-family: var(--font-rubik);
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 5px;
+}
+
+
+.banner-section .banner-content p {
+    color: #fff;
+    font-family: var(--font-rubik);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: .16px;
+    margin-bottom: 20px;
+}
+
+.row>* {
+    margin-top: 3rem;
+}

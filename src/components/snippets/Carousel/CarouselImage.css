@@ -1,0 +1,35 @@
+.example-carousel-image {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 800px;
+}
+
+.example-carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.example-carousel-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(181deg, rgba(16, 12, 8, 0.4) 0%, rgba(16, 12, 8, 0.4) 100%);
+    pointer-events: none;
+    /* Ensure the overlay does not block interactions */
+}
+
+.carousel-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+    font-size: 1.5rem;
+    text-align: center;
+}

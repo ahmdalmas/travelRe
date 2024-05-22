@@ -1,0 +1,36 @@
+.visa-header {
+    position: relative;
+    text-align: center;
+    padding: 100px 0;
+  }
+  
+  .visa-header h1, .visa-header p {
+    color: #fff;
+    margin: 0;
+  }
+  
+  .navibar {
+    background-color: #003366;
+  }
+  
+  .navibar.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  .country-btn {
+    margin-right: 1rem;
+  }
+  
+  .icon-btn {
+    display: flex;
+    align-items: center;
+  }
+  
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+  }
+  

@@ -143,3 +143,66 @@
     margin-bottom: 1.5rem;
   }
 }
+
+
+.main-button {
+  display: flex;
+  align-items: flex-end;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: slideInLeft;
+  padding-left: 15px;
+}
+
+.main-button {
+  position: relative;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
+  z-index: 1;
+  border-radius: 25px;
+  height: max-content;
+  text-decoration: none;
+}
+
+.main-button:hover,
+.main-button:focus {
+  color: white;
+}
+
+.main-button::after {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #218838;
+  transform-origin: right;
+  transform: scalex(0);
+  z-index: -1;
+  transition: transform 0.5s ease-out;
+  border-radius: 25px;
+}
+
+.main-button:hover::after,
+.main-button:focus::after {
+transform-origin: left;
+  transform: scalex(1);
+}
+
+.main-button:hover,
+.main-button:focus {
+color: white;
+}
+
+.main-button:not(:hover)::after {
+transform-origin: right;
+  transform: scalex(0);
+}

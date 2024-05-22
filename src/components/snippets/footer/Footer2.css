@@ -1,0 +1,105 @@
+.footer-section {
+  background-image: url(/public/images/footer-bg.png), linear-gradient(180deg, #1d231f, #1d231f);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  position: relative;
+}
+
+.footer-section .footer-top {
+  padding: 120px 0;
+}
+
+
+.footer-section .footer-top .footer-widget h3 span {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+
+.primary-btn1 {
+  border-radius: 5px;
+  background-color: var(--primary-color1);
+  font-family: var(--font-rubik);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--white-color);
+  letter-spacing: .48px;
+  text-transform: capitalize;
+  line-height: 1;
+  padding: 16px 34px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  white-space: nowrap;
+}
+
+.footer-section .footer-top .footer-widget .primary-btn1 {
+  padding: 15px 30px;
+}
+
+
+.footer-section .footer-top .footer-widget .widget-title {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 20px;
+}
+
+.footer-section .footer-top .footer-widget .widget-title h5 {
+  color: hsla(0, 0%, 100%, .8);
+  font-family: var(--font-rubik);
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: .66px;
+  margin-bottom: 0;
+}
+
+
+.footer-section .footer-top .footer-widget .widget-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-section .footer-top .footer-widget .widget-list li {
+  margin-bottom: 10px;
+  transition: .5s;
+}
+
+.footer-section .footer-top .footer-widget .widget-list li a {
+  color: hsla(0, 0%, 100%, .6);
+  font-family: var(--font-jost);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: .32px;
+  transition: .5s;
+}
+
+
+
+
+
+
+
+
+.footer-section .footer-bottom {
+  border-top: 1px solid hsla(0, 0%, 100%, .1);
+  padding: 20px 0;
+}
+
+.row {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1* 0);
+  margin-right: calc(-.5* 1.5rem);
+  margin-left: calc(-.5* 1.5rem);
+}

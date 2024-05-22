@@ -1,0 +1,322 @@
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 20%; /* Adjust as needed */
+    width: 100%;
+    margin: 0 auto;
+    z-index: 9999;
+  }
+  
+  .search-options {
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    padding: 10px 20px;
+    border: 1px solid hsla(0, 0%, 100%, .15);
+    background: linear-gradient(112deg, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, .05));
+    box-shadow: 19px 15px 46px 0 rgba(0, 0, 0, .14);
+    -webkit-backdrop-filter: blur(27.5px);
+    backdrop-filter: blur(27.5px);
+    border-radius: 200px;
+    align-items: center;
+  }
+  
+  .search-option {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: white;
+    padding: 0 10px;
+  }
+  
+  .search-option label {
+    margin-bottom: 5px;
+  }
+  
+  .search-option select {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  
+  @keyframes slideInLeft {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .search-button {
+    display: flex;
+    align-items: flex-end;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    animation-name: slideInLeft;
+    padding-left: 15px;
+  }
+  
+  .search-button button {
+    position: relative;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    overflow: hidden; /* Ensure the pseudo-element stays within the button */
+    transition: color 0.3s ease;
+    z-index: 1;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  
+  .search-button button:hover,
+  .search-button button:focus {
+    color: white;
+  }
+  
+  .search-button button::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #218838;
+    transform-origin: right;
+    transform: scalex(0);
+    z-index: -1;
+    transition: transform 0.5s ease-out;
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+  }
+  
+.search-button button:hover::after,
+.search-button button:focus::after {
+  transform-origin: left;
+    transform: scalex(1);
+}
+
+.search-button button:hover,
+.search-button button:focus {
+  color: white;
+}
+
+.search-button button:not(:hover)::after {
+  transform-origin: right;
+    transform: scalex(0);
+}
+
+.special-divider {
+    position: relative;
+}
+
+.special-divider:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    background-color: #dbe1cd;
+    width: 1px;
+    height: 78px;
+}
+
+.special-divider:after {
+  background: hsla(0, 0%, 100%, .15);
+  height: 58px;
+}
+  
+.single-search-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+}
+
+.single-search-box .searchbox-input label {
+  color: #6a6a6a;
+  font-family: var(--font-rubik);
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.single-search-box .searchbox-input label {
+  color: #031244;
+}
+
+/* Traveler input styling */
+.traveler-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.traveler-input-container input {
+  width: 50px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.traveler-input-container .increment-btn,
+.traveler-input-container .decrement-btn {
+  position: absolute;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.traveler-input-container .increment-btn {
+  right: -30px;
+  border-radius: 5px 0 0 5px;
+}
+
+.traveler-input-container .decrement-btn {
+  left: -30px;
+  border-radius: 0 5px 5px 0;
+}
+
+
+.special-button{
+  color: aliceblue;
+  font-family: var(--font-rubik);
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: .54px;
+  white-space: nowrap;
+  background-color: #4CAF50;
+  padding: 30px 53px;
+  border-radius: 0 0 30px 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.special-button:after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 15%;
+  right: -20%;
+  top: -4%;
+  height: 150%;
+  width: 150%;
+  bottom: 0;
+  border-radius: 2px;
+  background-color: var(--title-color);
+  transform: skewX(45deg) scaleX(0);
+  z-index: -1;
+  transition: all .5s ease-out 0s;
+}
+
+.searchbox-input {
+  line-height: 1;
+}
+
+.select-input {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.select-input select{
+  background-color: transparent;
+  color: antiquewhite;
+  padding: 5px 0px;
+  width: 135px;
+}
+
+
+
+.increment-btn,
+.decrement-btn {
+  background-color:transparent;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .increment-btn {
+  right: -30px;
+  border-radius: 5px 0 0 5px;
+} */
+
+/* .decrement-btn {
+  left: -30px;
+  border-radius: 0 5px 5px 0;
+} */
+
+.input-group > .form-control{
+  width:50px ;
+}
+
+.input-group > .form-control{
+  border: none;
+}
+
+.input-group > .form-control:focus{
+  box-shadow:none;
+}
+
+
+.mt-100px {
+  margin-top: -100px!important;
+}
+
+.md\:d-none{
+  display: flex;
+}
+
+
+@media screen and (min-width: 998px) {
+  .md\:d-none{
+    display: none;
+  }
+  
+  .mt-100px {
+    margin-top: 0;
+}
+  
+}
+
+.md\:d-flex{
+  display: none!important;
+}
+
+
+@media screen and (min-width: 998px) {
+  .md\:d-flex{
+    display: flex!important;
+  }
+  
+  
+}

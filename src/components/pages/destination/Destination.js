@@ -263,7 +263,7 @@ export default function Destination() {
                 </Stack>
               </div>
             </Col>
-            <Col className='md:d-block'>
+            {/* <Col className='md:d-block'>
               <div className='box-container w-100'>
                 <div className='booking-wrapper'>
                   <section className='booking-info'>
@@ -277,7 +277,7 @@ export default function Destination() {
                   </div>
                 </div>
               </div>
-            </Col>
+            </Col> */}
 
             <Paper sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={15} className='paper-container align-content-center bottom-nav'>
               <BottomNavigation>
