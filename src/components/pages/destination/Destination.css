@@ -86,15 +86,15 @@
     }
   }
 
-  .md\:d-none{
-    /* display: none; */
+  /* .md\:d-none{
+    display: none;
   }
 
   @media only screen and (max-width: 768px) {
     .md\:d-none{
-      /* display: block; */
+      display: block;
     }    
-  }
+  } */
 
   .md\:d-block{
     display: block;

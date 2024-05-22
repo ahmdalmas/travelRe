@@ -198,7 +198,7 @@ export default function Destination() {
         </Row>
         <Row>
           <div className='destination-container'>
-            <Col className='md:d-none'>
+            <Col className='d-block'>
               <div className='box-container w-100'>
                 <div className='booking-wrapper'>
                   <section className='booking-info'>

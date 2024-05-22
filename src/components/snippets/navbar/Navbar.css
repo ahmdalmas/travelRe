@@ -257,7 +257,7 @@
   border: 1px solid hsla(0, 0%, 100%, 0.15);
   -webkit-backdrop-filter: blur(1.5px);
     backdrop-filter: blur(1.5px);
-  max-width: 1780px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
   border-radius: 300px;
