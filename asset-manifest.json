@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/travelRe/static/css/main.860b391e.css",
-    "main.js": "/travelRe/static/js/main.0856769e.js",
+    "main.css": "/travelRe/static/css/main.9a5b1b61.css",
+    "main.js": "/travelRe/static/js/main.d2d35137.js",
     "static/media/img-2.jpg": "/travelRe/static/media/img-2.bb238fc1bea8ae2474d2.jpg",
-    "static/media/img-9.jpg": "/travelRe/static/media/img-9.f97f588f3670715d01b2.jpg",
+    "static/media/destination2.jpg": "/travelRe/static/media/destination2.7c8525e03518b71fb24d.jpg",
+    "static/media/destination-5.jpg": "/travelRe/static/media/destination-5.5f58fd5b5ba21a8496d6.jpg",
+    "static/media/destination-4.jpg": "/travelRe/static/media/destination-4.210ddb0e4a03060bbb7d.jpg",
+    "static/media/newsletter-banner.png": "/travelRe/static/media/newsletter-banner.9bf9a2e3c4f138bfbec2.png",
     "index.html": "/travelRe/index.html",
-    "main.860b391e.css.map": "/travelRe/static/css/main.860b391e.css.map",
-    "main.0856769e.js.map": "/travelRe/static/js/main.0856769e.js.map"
+    "main.9a5b1b61.css.map": "/travelRe/static/css/main.9a5b1b61.css.map",
+    "main.d2d35137.js.map": "/travelRe/static/js/main.d2d35137.js.map"
   },
   "entrypoints": [
-    "static/css/main.860b391e.css",
-    "static/js/main.0856769e.js"
+    "static/css/main.9a5b1b61.css",
+    "static/js/main.d2d35137.js"
   ]
 }
