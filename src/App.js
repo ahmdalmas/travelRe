@@ -23,7 +23,7 @@ function App() {
           <main>
             <div>
               <Routes>
-                <Route path='/' element={<Home />} />
+                <Route path='/travelRe' element={<Home />} />
                 <Route path='/services' element={<Services />} />
                 <Route path='/sign-up' element={<SignUp />} />
                 <Route path='/services/activity' element={<VisaPage />} />
