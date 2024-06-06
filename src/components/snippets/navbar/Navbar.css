@@ -1,13 +1,3 @@
-.container {
-  width: 100%;
-  height: 65px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  border-bottom: 1px solid rgb(241, 186, 84);
-  z-index: 9999;
-  transition: 150ms all;
-}
 
 .primary1-btn{
   border-radius: 35px;
@@ -205,16 +195,20 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, .8);
+  background: #1d1d23;
   -webkit-backdrop-filter: blur(1.5px);
   backdrop-filter: blur(1.5px);
   z-index: 999;
+  border-radius: 0;
 }
 
 @media (min-width: 1400px) and (max-width: 1599px) {
   .navibar{
     padding: 0 3%;
     max-width: 1380px;
+  }
+  .navibar.sticky {
+    max-width: 100%;
   }
 }
 
@@ -253,14 +247,14 @@
   align-items: center;
   padding: 0 60px;
   transition: all .8s ease-out 0s;
-  background: rgba(0, 0, 0, .8);
+  background: #1d1d23;
   border: 1px solid hsla(0, 0%, 100%, 0.15);
   -webkit-backdrop-filter: blur(1.5px);
     backdrop-filter: blur(1.5px);
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
-  border-radius: 300px;
+  border-radius: 0;
   /* background-color: #031244!important; */
   /*display: flex;
   justify-content: center;
@@ -279,7 +273,7 @@
   padding-top: 0 !important;
   padding-bottom: 0 !important;
   box-sizing: border-box;
-  background: rgba(0, 0, 0, .8);
+  background: #1d1d23;
   -webkit-backdrop-filter: blur(1.5px);
   backdrop-filter: blur(1.5px);
   z-index: 999;

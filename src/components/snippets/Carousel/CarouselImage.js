@@ -1,25 +1,23 @@
-import React, { useState } from 'react';
-import PropTypes from 'prop-types';
-import './CarouselImage.css'; // Assuming you have some CSS to style the image
+import React, { useState } from "react";
+import PropTypes from "prop-types";
+import "./CarouselImage.css"; // Assuming you have some CSS to style the image
 
 function ExampleCarouselImage({ text }) {
-    
-    let imagePath;
+  let imagePath;
 
-    switch (text){
-        case 'Get your visas on time, that is a promise':
-            imagePath = '/images/banner-1.jpg'
-            break;
-        case 'Let’s Explore Your Holiday Trip':
-            imagePath = '/images/banner-2.jpg'
-            break;
-        case 'Receive your visas promptly, we guarantee it':
-            imagePath = '/images/destination-4.jpg'
-            break;
-        default:
-            imagePath = '/images/banner-1.jpg';
-    }
-
+  switch (text) {
+    case "Get your visas on time, that is a promise":
+      imagePath = "/images/banner-1.jpg";
+      break;
+    case "Let’s Explore Your Holiday Trip":
+      imagePath = "/images/banner-2.jpg";
+      break;
+    case "Receive your visas promptly, we guarantee it":
+      imagePath = "/images/destination-4.jpg";
+      break;
+    default:
+      imagePath = "/images/banner-1.jpg";
+  }
 
   return (
     <div className="example-carousel-image">
@@ -29,7 +27,9 @@ function ExampleCarouselImage({ text }) {
         alt={text}
       />
       <div className="carousel-text-overlay">
-        {text}
+        <div className="home2-banner-content">
+          <h1 className="animate-text">{text}</h1>
+        </div>
       </div>
     </div>
   );

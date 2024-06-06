@@ -1,0 +1,188 @@
+.stacked-visa-details {
+  display: flex!important;
+  flex-direction: row!important;
+}
+
+@media screen and (max-width: 500px) {
+  .stacked-visa-details {
+    flex-direction: column!important;
+  }
+}
+
+.bg-grad {
+  background: linear-gradient(125deg, rgb(29 29 35), rgb(29 29 35));  box-shadow: 4px 3px 40px 0 rgba(16, 33, 34, .06);
+}
+
+
+.Booking-container {
+  background: linear-gradient(125deg, rgb(29 29 35), rgb(29 29 35));  box-shadow: 4px 3px 40px 0 rgba(16, 33, 34, .06);
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  height: fit-content;
+  padding: 1.4rem;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px 0px rgb(0, 0, 0, .5);
+  background-color: #ffffff;
+  display: none;
+}
+
+
+@media screen and (max-width: 992px) {
+  .Booking-container {
+    display: block!important;
+  }
+
+  .visa-details-pages .visa-sidebar .sidebar-top {
+    display: none!important;
+  }
+}
+
+.Booking-container h4 {
+  color: var(--title-color);
+  text-align: center;
+  font-family: var(--font-rubik);
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 0
+}
+
+.Booking-container p {
+  text-align: center;
+  font-family: var(--font-jost);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 0
+}
+
+.Booking-container h6 {
+  color: var(--primary-color1);
+  text-align: center;
+  font-family: var(--font-rubik);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px
+}
+
+.Booking-container h6 span {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 16px
+}
+.visa-details-pages .visa-sidebar .sidebar-top {
+  background: linear-gradient(125deg, rgb(29 29 35), rgb(29 29 35));  box-shadow: 4px 3px 40px 0 rgba(16, 33, 34, .06);
+  padding: 30px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  width: 26.5%;
+  height: fit-content;
+  padding: 1.4rem;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: 0px 10px 20px 0px rgb(0, 0, 0, .5);
+  background-color: #ffffff;
+  position: fixed;
+}
+
+
+
+.visa-details-pages .visa-sidebar .sidebar-top h4 {
+  color: var(--title-color);
+  text-align: center;
+  font-family: var(--font-rubik);
+  font-size: 28px;
+  font-weight: 500;
+  margin-bottom: 0
+}
+
+.visa-details-pages .visa-sidebar .sidebar-top p {
+  text-align: center;
+  font-family: var(--font-jost);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
+  margin-bottom: 0
+}
+
+.visa-details-pages .visa-sidebar .sidebar-top h6 {
+  color: var(--primary-color1);
+  text-align: center;
+  font-family: var(--font-rubik);
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px
+}
+
+.visa-details-pages .visa-sidebar .sidebar-top h6 span {
+  color: var(--text-color);
+  font-weight: 400;
+  font-size: 16px
+}
+
+.visa-details-pages .visa-sidebar .inquery-form {
+  background: linear-gradient(125deg, rgba(99, 171, 69, .1), rgba(251, 176, 59, .1));
+  box-shadow: 4px 3px 40px 0 rgba(16, 33, 34, .06);
+  padding: 30px;
+  border-radius: 5px
+}
+
+.visa-details-pages .visa-sidebar .inquery-form h4 {
+  color: var(--title-color);
+  font-family: var(--font-rubik);
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-title {
+  margin-bottom: 10px
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-title h4 {
+  margin-bottom: 7px
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-title p {
+  color: var(--text-color);
+  font-size: 14px;
+  line-height: 26px
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-inner .nice-select {
+  background-color: #faf8fb;
+  border: 1px solid #eee;
+  border-radius: 0;
+  height: 50px;
+  padding: 0 20px
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-inner .nice-select .list {
+  border-radius: 0
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-inner .nice-select .list .option.selected,
+.visa-details-pages .visa-sidebar .inquery-form .form-inner .nice-select .list .option:hover {
+  background-color: rgba(var(--primary-color1-opc), .3);
+  color: var(--title-color)
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-inner textarea {
+  padding: 10px 20px;
+  border-radius: 0
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-inner .primary-btn1 {
+  padding: 19px 34px
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-inner .surname-options .form-check {
+  cursor: pointer
+}
+
+.visa-details-pages .visa-sidebar .inquery-form .form-inner .surname-options .form-check .form-check-input {
+  background-color: transparent
+}

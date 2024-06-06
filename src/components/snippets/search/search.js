@@ -1,47 +1,45 @@
+import mainCSS from "./main2.css";
+import "./search.css";
 
-import './main2.css';
-import './search.css';
+import React, { useState } from "react";
+import { TravelExplore, ModeOfTravel, People } from "@mui/icons-material";
+import {
+  Autocomplete,
+  TextField,
+  ListItem,
+  ListItemText,
+  InputAdornment,
+  ListItemIcon,
+  Paper,
+} from "@mui/material";
+import Flag from "react-world-flags";
 
-
-import React, { useState } from 'react';
-import { TravelExplore, ModeOfTravel, People } from '@mui/icons-material';
-import { Autocomplete, TextField, ListItem, ListItemText, InputAdornment, ListItemIcon, Paper } from '@mui/material';
-import Flag from 'react-world-flags';
-
-
-
-import { Button, Form, InputGroup } from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-
-
+import { Button, Form, InputGroup } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const countries = [
-  { code: 'AE', name: 'United Arab Emirates', visaTime: '2 days' },
-  { code: 'EG', name: 'Egypt', visaTime: '9 days' },
-  { code: 'SG', name: 'Singapore', visaTime: '10 days' },
-  { code: 'JP', name: 'Japan', visaTime: '30 days' },
-  { code: 'TR', name: 'Türkiye', visaTime: '24 days' },
-  { code: 'MY', name: 'Malaysia', visaTime: '15 days' },
+  { code: "AE", name: "United Arab Emirates", visaTime: "2 days" },
+  { code: "EG", name: "Egypt", visaTime: "9 days" },
+  { code: "SG", name: "Singapore", visaTime: "10 days" },
+  { code: "JP", name: "Japan", visaTime: "30 days" },
+  { code: "TR", name: "Türkiye", visaTime: "24 days" },
+  { code: "MY", name: "Malaysia", visaTime: "15 days" },
 ];
 
-
-
 function SearchComponent() {
-
   const [travelerCount, setTravelerCount] = useState(1);
 
   const incrementTraveler = () => {
-    if (travelerCount == '') {
+    if (travelerCount == "") {
       return setTravelerCount(1);
-    }
-    else {
-      return setTravelerCount(prevCount => prevCount + 1);
+    } else {
+      return setTravelerCount((prevCount) => prevCount + 1);
     }
   };
 
   const decrementTraveler = () => {
     if (travelerCount > 1) {
-      setTravelerCount(prevCount => prevCount - 1);
+      setTravelerCount((prevCount) => prevCount - 1);
     }
   };
 
@@ -53,35 +51,34 @@ function SearchComponent() {
   };
 
   const handleKeyDown = (event) => {
-    if (event.key === 'Backspace' || event.key === 'Delete') {
-      setTravelerCount('')
+    if (event.key === "Backspace" || event.key === "Delete") {
+      setTravelerCount("");
     }
   };
 
   let navigate = useNavigate();
 
-  const routeChange = () => { 
-    let path = '/services/activity'; 
+  const routeChange = () => {
+    let path = "/services/activity";
     navigate(path);
-  }
-
+  };
 
   return (
     <div>
       <div className="search-container md:d-flex">
         <div className="search-options">
           <div className="search-option special-divider ps-0">
-            <div className='single-search-box w-auto'>
-              <TravelExplore fontSize='large' />
-              <div className='searchbox-input'>
+            <div className="single-search-box w-auto">
+              <TravelExplore fontSize="large" />
+              <div className="searchbox-input">
                 <label>Country</label>
                 <Autocomplete
-                  className='w-100'
+                  className="w-100"
                   freeSolo
                   options={countries}
                   getOptionLabel={(option) => option.name}
                   renderInput={(params) => (
-                    <div className='d-flex'>
+                    <div className="d-flex">
                       <TextField
                         {...params}
                         InputProps={{
@@ -90,23 +87,23 @@ function SearchComponent() {
                         hiddenLabel
                         placeholder="Where to?"
                         sx={{
-                          '& .MuiOutlinedInput-root': {
-                            '& fieldset': {
-                              border: 'none',
+                          "& .MuiOutlinedInput-root": {
+                            "& fieldset": {
+                              border: "none",
                             },
-                            color:'antiquewhite',
-                            padding: '0',
-                            '& input::placeholder': {
-                              color: '#faebd7',
+                            color: "antiquewhite",
+                            padding: "0",
+                            "& input::placeholder": {
+                              color: "#faebd7",
                               opacity: 1,
-                              fontWeight: '500',
-                              fontSize: '1.2rem',
+                              fontWeight: "500",
+                              fontSize: "1.2rem",
                             },
-                            width: '400px',
-                            '& .MuiAutocomplete-input': {
-                              padding: '5px 0px'
-                            }
-                          }
+                            width: "400px",
+                            "& .MuiAutocomplete-input": {
+                              padding: "5px 0px",
+                            },
+                          },
                         }}
                         fullWidth
                       />
@@ -115,34 +112,39 @@ function SearchComponent() {
                   PaperComponent={(props) => (
                     <Paper
                       {...props}
-                      className='custom-scrollbar'
+                      className="custom-scrollbar"
                       sx={{
-                        backgroundColor: '#f0f0f0',
-                        borderRadius: '8px',
-                        overflow: 'hidden',
-                        '& .MuiAutocomplete-listbox': {
-                          '& .MuiAutocomplete-option': {
-                            '&:hover': {
-                              backgroundColor: '#e0e0e0',
+                        backgroundColor: "#f0f0f0",
+                        borderRadius: "8px",
+                        overflow: "hidden",
+                        "& .MuiAutocomplete-listbox": {
+                          "& .MuiAutocomplete-option": {
+                            "&:hover": {
+                              backgroundColor: "#e0e0e0",
                             },
                           },
                         },
-                        marginTop: '20px',
-                        marginBottom: '20px',
+                        marginTop: "20px",
+                        marginBottom: "20px",
                       }}
                     />
                   )}
                   renderOption={(props, option) => (
-                    <ListItem {...props} key={option.code}
+                    <ListItem
+                      {...props}
+                      key={option.code}
                       sx={{
-                        backgroundColor: '#f0f0f0',
-                        '&:hover': {
-                          backgroundColor: '#e0e0e0',
+                        backgroundColor: "#f0f0f0",
+                        "&:hover": {
+                          backgroundColor: "#e0e0e0",
                         },
                       }}
                     >
                       <ListItemIcon>
-                        <Flag code={option.code} style={{ width: 32, height: 20 }} />
+                        <Flag
+                          code={option.code}
+                          style={{ width: 32, height: 20 }}
+                        />
                       </ListItemIcon>
                       <ListItemText
                         primary={option.name}
@@ -155,13 +157,11 @@ function SearchComponent() {
             </div>
           </div>
           <div className="search-option special-divider">
-            <div className='single-search-box'>
-              <ModeOfTravel fontSize='large' />
-              <div className='searchbox-input'>
-                <label>
-                  Visa Type
-                </label>
-                <div className='select-input'>
+            <div className="single-search-box">
+              <ModeOfTravel fontSize="large" />
+              <div className="searchbox-input">
+                <label>Visa Type</label>
+                <div className="select-input">
                   <select>
                     <option>Tourist</option>
                     <option>Tourist</option>
@@ -172,30 +172,38 @@ function SearchComponent() {
             </div>
           </div>
           <div className="search-option special-divider">
-            <div className='single-search-box'>
-              <People fontSize='large' />
-              <div className='searchbox-input'>
-                <label>
-                  Travellers
-                </label>
-                <div className='select-input'>
+            <div className="single-search-box">
+              <People fontSize="large" />
+              <div className="searchbox-input">
+                <label>Travellers</label>
+                <div className="select-input">
                   <InputGroup>
-                    <div className='align-content-center'>
-                      <button className='increment-btn' onClick={incrementTraveler}>+</button>
+                    <div className="align-content-center">
+                      <button
+                        className="increment-btn"
+                        onClick={incrementTraveler}
+                      >
+                        +
+                      </button>
                     </div>
                     <Form.Control
                       type="text"
                       value={travelerCount}
                       onChange={handleTravelerChange}
                       onKeyDown={handleKeyDown}
-                      className='bg-transparent border-0'
+                      className="bg-transparent border-0"
                       style={{
-                        color: 'antiquewhite',
-                        textAlign: 'center',
+                        color: "antiquewhite",
+                        textAlign: "center",
                       }}
                     />
-                    <div className='align-content-center'>
-                      <button className='decrement-btn' onClick={decrementTraveler}>-</button>
+                    <div className="align-content-center">
+                      <button
+                        className="decrement-btn"
+                        onClick={decrementTraveler}
+                      >
+                        -
+                      </button>
                     </div>
                   </InputGroup>
                 </div>
@@ -203,26 +211,35 @@ function SearchComponent() {
             </div>
           </div>
           <div className="search-button">
-            <button onClick={routeChange} type="submit">Search</button>
+            <button onClick={routeChange} type="submit">
+              Search
+            </button>
           </div>
         </div>
-
       </div>
       <div class="home1-banner-bottom style-2 md:d-none mt-100px">
         <div class="container-md container-fluid">
           <div class="filter-wrapper">
-
             <div class="filter-group">
               <div class="tab-content" id="pills-tab2Content">
-                
-                <div class="tab-pane fade  show active" id="visa" role="tabpanel" aria-labelledby="visa-tab">
+                <div
+                  class="tab-pane fade  show active"
+                  id="visa"
+                  role="tabpanel"
+                  aria-labelledby="visa-tab"
+                >
                   <form>
                     <div class="filter-area">
                       <div class="row g-xl-4 gy-4">
                         <div class="col-xl-3 col-md-6 d-flex justify-content-center divider">
                           <div class="single-search-box">
                             <div class="icon">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="27"
+                                height="27"
+                                viewBox="0 0 27 27"
+                              >
                                 <path d="M18.0075 17.8392C20.8807 13.3308 20.5195 13.8933 20.6023 13.7757C21.6483 12.3003 22.2012 10.5639 22.2012 8.75391C22.2012 3.95402 18.3062 0 13.5 0C8.7095 0 4.79883 3.94622 4.79883 8.75391C4.79883 10.5627 5.3633 12.3446 6.44361 13.8399L8.99237 17.8393C6.26732 18.2581 1.63477 19.506 1.63477 22.2539C1.63477 23.2556 2.28857 24.6831 5.40327 25.7955C7.57814 26.5722 10.4536 27 13.5 27C19.1966 27 25.3652 25.3931 25.3652 22.2539C25.3652 19.5055 20.7381 18.2589 18.0075 17.8392ZM7.76508 12.9698C7.75639 12.9562 7.7473 12.9428 7.73782 12.9298C6.83886 11.6931 6.38086 10.2274 6.38086 8.75391C6.38086 4.79788 9.56633 1.58203 13.5 1.58203C17.4255 1.58203 20.6191 4.7993 20.6191 8.75391C20.6191 10.2297 20.1698 11.6457 19.3195 12.8498C19.2432 12.9503 19.6408 12.3327 13.5 21.9686L7.76508 12.9698ZM13.5 25.418C7.27766 25.418 3.2168 23.589 3.2168 22.2539C3.2168 21.3566 5.30339 19.8811 9.92714 19.306L12.8329 23.8656C12.9044 23.9777 13.0029 24.0701 13.1195 24.134C13.2361 24.198 13.367 24.2315 13.4999 24.2315C13.6329 24.2315 13.7638 24.198 13.8804 24.134C13.9969 24.0701 14.0955 23.9777 14.167 23.8656L17.0727 19.306C21.6966 19.8811 23.7832 21.3566 23.7832 22.2539C23.7832 23.5776 19.7589 25.418 13.5 25.418Z"></path>
                                 <path d="M13.5 4.79883C11.3192 4.79883 9.54492 6.57308 9.54492 8.75391C9.54492 10.9347 11.3192 12.709 13.5 12.709C15.6808 12.709 17.4551 10.9347 17.4551 8.75391C17.4551 6.57308 15.6808 4.79883 13.5 4.79883ZM13.5 11.127C12.1915 11.127 11.127 10.0624 11.127 8.75391C11.127 7.44541 12.1915 6.38086 13.5 6.38086C14.8085 6.38086 15.873 7.44541 15.873 8.75391C15.873 10.0624 14.8085 11.127 13.5 11.127Z"></path>
                               </svg>
@@ -230,7 +247,14 @@ function SearchComponent() {
                             <div class="searchbox-input">
                               <label>Country</label>
                               <div class="style-2 custom-select-dropdown">
-                                <div class="select-input"><input type="text" readonly="" value="Australia" /><i class="bi bi-chevron-down"></i></div>
+                                <div class="select-input">
+                                  <input
+                                    type="text"
+                                    readonly=""
+                                    value="Australia"
+                                  />
+                                  <i class="bi bi-chevron-down"></i>
+                                </div>
                                 <div class=" custom-select-wrap two ">
                                   <ul class="option-list">
                                     <li class="single-item">
@@ -257,7 +281,12 @@ function SearchComponent() {
                         <div class="col-xl-3 col-md-6 d-flex justify-content-center divider">
                           <div class="single-search-box">
                             <div class="icon">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="27"
+                                height="27"
+                                viewBox="0 0 27 27"
+                              >
                                 <g clip-path="url(#clip0_273_1731)">
                                   <path d="M26.4727 15.0783C26.334 15.0783 26.1981 15.1348 26.0998 15.2328C26.0013 15.332 25.9458 15.4659 25.9453 15.6057C25.9453 15.7443 26.0017 15.8804 26.0998 15.9785C26.199 16.077 26.3329 16.1325 26.4727 16.133C26.6115 16.133 26.7474 16.0766 26.8455 15.9785C26.944 15.8794 26.9995 15.7454 27 15.6057C27 15.4665 26.9436 15.3309 26.8455 15.2328C26.7464 15.1343 26.6124 15.0788 26.4727 15.0783Z"></path>
                                   <path d="M22.9027 6.15386H22.4775V2.97002H23.0675C23.3588 2.97002 23.5949 2.73399 23.5949 2.44268V1.60226C23.5949 0.718746 22.8761 3.05176e-05 21.9926 3.05176e-05H16.4811C15.5978 3.05176e-05 14.879 0.718746 14.879 1.60226V2.44268C14.879 2.73399 15.1151 2.97002 15.4064 2.97002H15.9962V6.15386H15.571C15.0486 6.1537 14.531 6.2534 14.046 6.44759V2.63674C14.046 2.41283 13.9045 2.21324 13.6932 2.13904C13.5665 2.09478 13.4277 2.10045 13.305 2.15491C13.3042 2.15533 13.3034 2.15533 13.3024 2.15575L7.45469 4.78688C7.18912 4.90637 7.07068 5.21867 7.19018 5.48418C7.30962 5.7497 7.62191 5.86835 7.88743 5.7487L10.7903 4.44268L5.2822 9.53855L1.96553 8.41341L3.98451 7.50496C4.25003 7.38552 4.36842 7.07323 4.24898 6.80771C4.12953 6.54219 3.81724 6.42354 3.55167 6.54319L0.31099 8.00124C0.214435 8.0447 0.133195 8.11622 0.077836 8.20648C0.0224775 8.29674 -0.00443615 8.40157 0.000596289 8.50733C0.00562422 8.6131 0.0423852 8.7149 0.106091 8.79948C0.169797 8.88406 0.257496 8.94749 0.357766 8.98152L5.01505 10.5617L6.58452 14.3201C6.63148 14.4325 6.71594 14.5253 6.82353 14.5825C6.93113 14.6397 7.05523 14.6579 7.17473 14.634C7.30092 14.6086 7.41346 14.5379 7.49113 14.4352C7.49234 14.4336 7.49377 14.4321 7.49524 14.4303L9.2851 12.0086L11.474 12.7522V20.7903C11.474 22.9282 13.1203 24.6877 15.2115 24.8706V25.5749C15.2115 26.3606 15.8509 27 16.6366 27C17.4225 27 18.0617 26.3606 18.0617 25.5749V24.8873H20.412V25.5749C20.412 26.3606 21.0512 27 21.8371 27C22.6228 27 23.2622 26.3606 23.2622 25.5749V24.8706C25.3534 24.6877 26.9997 22.9281 26.9997 20.7903V17.7196C26.9997 17.4283 26.7636 17.1922 26.4724 17.1922C26.1811 17.1922 25.945 17.4283 25.945 17.7196V20.7903C25.945 22.4679 24.5803 23.8326 22.9027 23.8326H15.571C13.8934 23.8326 12.5287 22.4677 12.5287 20.7904V13.1104L13.3492 13.3894C13.4285 13.4163 13.5132 13.4239 13.5961 13.4116C13.679 13.3993 13.7577 13.3675 13.8259 13.3187C13.894 13.2699 13.9495 13.2055 13.9878 13.1309C14.026 13.0564 14.046 12.9738 14.046 12.89V7.61802C14.5093 7.3494 15.0354 7.20811 15.571 7.20849H22.9028C24.5804 7.20849 25.9451 8.57325 25.9451 10.2508V13.5854C25.9451 13.8767 26.1812 14.1128 26.4724 14.1128C26.7637 14.1128 26.9998 13.8767 26.9998 13.5854V10.2508C26.9998 7.9917 25.1619 6.1538 22.9028 6.1538L22.9027 6.15386ZM22.2075 24.8873V25.5747C22.2074 25.6729 22.1684 25.7671 22.0989 25.8365C22.0295 25.906 21.9353 25.945 21.8371 25.9451C21.7389 25.945 21.6448 25.9059 21.5753 25.8365C21.5059 25.7671 21.4668 25.6729 21.4667 25.5747V24.8873H22.2075ZM17.007 24.8873V25.5747C17.007 25.7791 16.8409 25.9451 16.6366 25.9451C16.4322 25.9451 16.2662 25.7791 16.2662 25.5747V24.8873H17.007ZM6.54376 10.6993V11.4856L6.03867 10.2755L8.71472 7.79969L6.6593 10.3701C6.58449 10.4635 6.54374 10.5796 6.54376 10.6993ZM7.59844 12.5161V11.4355L8.23679 11.6524L7.59844 12.5161ZM12.9913 12.1538L9.26469 10.8878C9.26348 10.8871 9.26226 10.8869 9.26121 10.8865L7.95234 10.4418L12.9913 4.14046V12.1538ZM15.9335 1.6022C15.9335 1.30019 16.1793 1.05466 16.4811 1.05466H21.9926C22.2946 1.05466 22.5402 1.30019 22.5402 1.6022V1.91529H15.9335V1.6022ZM17.0509 2.97002H21.4228V6.15386H17.0509V2.97002Z"></path>
@@ -268,7 +297,14 @@ function SearchComponent() {
                             <div class="searchbox-input">
                               <label>Visa Type</label>
                               <div class="style-2 custom-select-dropdown">
-                                <div class="select-input"><input type="text" readonly="" value="Tourist" /><i class="bi bi-chevron-down"></i></div>
+                                <div class="select-input">
+                                  <input
+                                    type="text"
+                                    readonly=""
+                                    value="Tourist"
+                                  />
+                                  <i class="bi bi-chevron-down"></i>
+                                </div>
                                 <div class=" custom-select-wrap two ">
                                   <ul class="option-list">
                                     <li class="single-item">
@@ -286,44 +322,16 @@ function SearchComponent() {
                             </div>
                           </div>
                         </div>
-                        <div class="col-xl-3 col-md-6 d-flex justify-content-center divider">
-                          <div class="single-search-box">
-                            <div class="icon">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" viewBox="0 0 23 23" fill="none">
-                                <g clip-path="url(#clip0_2037_411)">
-                                  <path d="M15.5978 13.531L12.391 11.1259V6.22659C12.391 5.73397 11.9928 5.33578 11.5002 5.33578C11.0076 5.33578 10.6094 5.73397 10.6094 6.22659V11.5713C10.6094 11.8519 10.7412 12.1165 10.9657 12.2839L14.5288 14.9563C14.6826 15.0721 14.8699 15.1346 15.0624 15.1345C15.3341 15.1345 15.6013 15.0124 15.7759 14.7772C16.0717 14.3844 15.9916 13.8258 15.5978 13.531Z"></path>
-                                  <path d="M11.5 0C5.15851 0 0 5.15851 0 11.5C0 17.8415 5.15851 23 11.5 23C17.8415 23 23 17.8415 23 11.5C23 5.15851 17.8415 0 11.5 0ZM11.5 21.2184C6.14194 21.2184 1.78156 16.8581 1.78156 11.5C1.78156 6.14194 6.14194 1.78156 11.5 1.78156C16.859 1.78156 21.2184 6.14194 21.2184 11.5C21.2184 16.8581 16.8581 21.2184 11.5 21.2184Z"></path>
-                                </g>
-                              </svg>
-                            </div>
-                            <div class="searchbox-input">
-                              <label>Nationality</label>
-                              <div class="style-2 custom-select-dropdown">
-                                <div class="select-input"><input type="text" readonly="" value="Bangladeshi" /><i class="bi bi-chevron-down"></i></div>
-                                <div class=" custom-select-wrap two ">
-                                  <ul class="option-list">
-                                    <li class="single-item">
-                                      <h6>Bangladeshi</h6>
-                                    </li>
-                                    <li class="single-item">
-                                      <h6>Indian</h6>
-                                    </li>
-                                    <li class="single-item">
-                                      <h6>Brazilian</h6>
-                                    </li>
-                                    <li class="single-item">
-                                      <h6>Australian</h6>
-                                    </li>
-                                  </ul>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
+
                         <div class="col-xl-3 col-md-6 d-flex justify-content-center">
                           <div class="single-search-box">
                             <div class="icon">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27">
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="27"
+                                height="27"
+                                viewBox="0 0 27 27"
+                              >
                                 <g clip-path="url(#clip0_273_1731)">
                                   <path d="M26.4727 15.0783C26.334 15.0783 26.1981 15.1348 26.0998 15.2328C26.0013 15.332 25.9458 15.4659 25.9453 15.6057C25.9453 15.7443 26.0017 15.8804 26.0998 15.9785C26.199 16.077 26.3329 16.1325 26.4727 16.133C26.6115 16.133 26.7474 16.0766 26.8455 15.9785C26.944 15.8794 26.9995 15.7454 27 15.6057C27 15.4665 26.9436 15.3309 26.8455 15.2328C26.7464 15.1343 26.6124 15.0788 26.4727 15.0783Z"></path>
                                   <path d="M22.9027 6.15386H22.4775V2.97002H23.0675C23.3588 2.97002 23.5949 2.73399 23.5949 2.44268V1.60226C23.5949 0.718746 22.8761 3.05176e-05 21.9926 3.05176e-05H16.4811C15.5978 3.05176e-05 14.879 0.718746 14.879 1.60226V2.44268C14.879 2.73399 15.1151 2.97002 15.4064 2.97002H15.9962V6.15386H15.571C15.0486 6.1537 14.531 6.2534 14.046 6.44759V2.63674C14.046 2.41283 13.9045 2.21324 13.6932 2.13904C13.5665 2.09478 13.4277 2.10045 13.305 2.15491C13.3042 2.15533 13.3034 2.15533 13.3024 2.15575L7.45469 4.78688C7.18912 4.90637 7.07068 5.21867 7.19018 5.48418C7.30962 5.7497 7.62191 5.86835 7.88743 5.7487L10.7903 4.44268L5.2822 9.53855L1.96553 8.41341L3.98451 7.50496C4.25003 7.38552 4.36842 7.07323 4.24898 6.80771C4.12953 6.54219 3.81724 6.42354 3.55167 6.54319L0.31099 8.00124C0.214435 8.0447 0.133195 8.11622 0.077836 8.20648C0.0224775 8.29674 -0.00443615 8.40157 0.000596289 8.50733C0.00562422 8.6131 0.0423852 8.7149 0.106091 8.79948C0.169797 8.88406 0.257496 8.94749 0.357766 8.98152L5.01505 10.5617L6.58452 14.3201C6.63148 14.4325 6.71594 14.5253 6.82353 14.5825C6.93113 14.6397 7.05523 14.6579 7.17473 14.634C7.30092 14.6086 7.41346 14.5379 7.49113 14.4352C7.49234 14.4336 7.49377 14.4321 7.49524 14.4303L9.2851 12.0086L11.474 12.7522V20.7903C11.474 22.9282 13.1203 24.6877 15.2115 24.8706V25.5749C15.2115 26.3606 15.8509 27 16.6366 27C17.4225 27 18.0617 26.3606 18.0617 25.5749V24.8873H20.412V25.5749C20.412 26.3606 21.0512 27 21.8371 27C22.6228 27 23.2622 26.3606 23.2622 25.5749V24.8706C25.3534 24.6877 26.9997 22.9281 26.9997 20.7903V17.7196C26.9997 17.4283 26.7636 17.1922 26.4724 17.1922C26.1811 17.1922 25.945 17.4283 25.945 17.7196V20.7903C25.945 22.4679 24.5803 23.8326 22.9027 23.8326H15.571C13.8934 23.8326 12.5287 22.4677 12.5287 20.7904V13.1104L13.3492 13.3894C13.4285 13.4163 13.5132 13.4239 13.5961 13.4116C13.679 13.3993 13.7577 13.3675 13.8259 13.3187C13.894 13.2699 13.9495 13.2055 13.9878 13.1309C14.026 13.0564 14.046 12.9738 14.046 12.89V7.61802C14.5093 7.3494 15.0354 7.20811 15.571 7.20849H22.9028C24.5804 7.20849 25.9451 8.57325 25.9451 10.2508V13.5854C25.9451 13.8767 26.1812 14.1128 26.4724 14.1128C26.7637 14.1128 26.9998 13.8767 26.9998 13.5854V10.2508C26.9998 7.9917 25.1619 6.1538 22.9028 6.1538L22.9027 6.15386ZM22.2075 24.8873V25.5747C22.2074 25.6729 22.1684 25.7671 22.0989 25.8365C22.0295 25.906 21.9353 25.945 21.8371 25.9451C21.7389 25.945 21.6448 25.9059 21.5753 25.8365C21.5059 25.7671 21.4668 25.6729 21.4667 25.5747V24.8873H22.2075ZM17.007 24.8873V25.5747C17.007 25.7791 16.8409 25.9451 16.6366 25.9451C16.4322 25.9451 16.2662 25.7791 16.2662 25.5747V24.8873H17.007ZM6.54376 10.6993V11.4856L6.03867 10.2755L8.71472 7.79969L6.6593 10.3701C6.58449 10.4635 6.54374 10.5796 6.54376 10.6993ZM7.59844 12.5161V11.4355L8.23679 11.6524L7.59844 12.5161ZM12.9913 12.1538L9.26469 10.8878C9.26348 10.8871 9.26226 10.8869 9.26121 10.8865L7.95234 10.4418L12.9913 4.14046V12.1538ZM15.9335 1.6022C15.9335 1.30019 16.1793 1.05466 16.4811 1.05466H21.9926C22.2946 1.05466 22.5402 1.30019 22.5402 1.6022V1.91529H15.9335V1.6022ZM17.0509 2.97002H21.4228V6.15386H17.0509V2.97002Z"></path>
@@ -333,16 +341,34 @@ function SearchComponent() {
                             </div>
                             <div class="searchbox-input">
                               <label>Traveler</label>
-                              <div class="quantity-counter"><a class="quantity__minus" ><i class="bi bi-chevron-down"></i></a><input type="text" class="quantity__input" name="quantity" value="1" spellcheck="false" data-ms-editor="true" /><a class="quantity__plus" ><i class="bi bi-chevron-up"></i></a></div>
+                              <div class="quantity-counter">
+                                <a class="quantity__minus">
+                                  <i class="bi bi-chevron-down"></i>
+                                </a>
+                                <input
+                                  type="text"
+                                  class="quantity__input"
+                                  name="quantity"
+                                  value="1"
+                                  spellcheck="false"
+                                  data-ms-editor="true"
+                                />
+                                <a class="quantity__plus">
+                                  <i class="bi bi-chevron-up"></i>
+                                </a>
+                              </div>
                             </div>
                           </div>
                         </div>
+                        <div class="col-xl-3 col-md-6 d-flex justify-content-center divider">
+                          <button type="submit" onClick={routeChange} className="align-self-center">
+                            Search
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <button type="submit" onClick={routeChange}>Search</button>
                   </form>
                 </div>
-                
               </div>
             </div>
           </div>

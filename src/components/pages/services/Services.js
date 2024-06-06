@@ -1,6 +1,6 @@
 import React from 'react';
 import CardItem from '../../snippets/card/CardItem';
-import Footer from '../../snippets/footer/Footer2';
+import Footer from '../../snippets/footer/Footer';
 
 import '../../../App.css';
 import '../../snippets/card/Cards.css';
